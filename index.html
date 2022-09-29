@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDS Course Selection Assistant</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <script src="script.js"></script>
+
+<div class="container">
+  <header>
+    <div class="primary_header">
+      <h1 class="title"> Course Selection</h1>
+    </div>
+  </header>
+  <section>
+    <h2 class="noDisplay">Main Content</h2>
+    <article class="left_article">
+      <h3>Welcome to your course selection process!</h3>
+      <p>Please input the all courses you have taken, and any that you know you plan on taking. Once a subject's number turns green, you will know that you have taken enough claseses to meet the requirement.</p>
+      <p><a href="https://drive.google.com/file/d/1trospAMLiNKy-JgBEZQKfqIKm-qye_P1/view">• 2022-2023 Course Selection Guidelines</a></p>
+      <p>&darr;Selection Tool Below&darr;</p>
+    </article>
+    <aside class="right_article"><img src="PDS.jpg" alt="" class="placeholder" style="height: 500px; width:500px; margin-left: auto; margin-right: auto; display: block;"/> </aside>
+  </section>
+  <div class="row">
+    <div class="columns">
+      <h4>Required Credits</h4>
+      <p>English: <div id="EngTotal" class="courseTotal">0</div> / 4</p>
+      <p>Math: <div id="MathTotal" class="courseTotal">0</div> / 3</p>
+      <p>History: <div id="HistTotal" class="courseTotal">0</div> / 3</p>
+      <p>Core (lab) Sciences: <div id="SciTotal" class="courseTotal">0</div> / 2</p>
+      <p>Language: <div id="LangTotal" class="courseTotal">0</div> / 2</p>
+      <p>Arts: <div id="ArtTotal" class="courseTotal">0</div> / 1</p>
+      <p>Electives: <div id="ElectTotal" class="courseTotal">0</div> / 3</p>
+    </div>
+    <div class="columns">
+<h4>Freshman Year</h4>
+      <p><label for="select">English:</label>
+      <p></p>
+      <select name="select" id="FreshEng" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+      </select></p>
+
+      <p><label for="select" >Math:</label>
+      <p></p>
+      <select name="select" id="FreshMath" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+      </select></p>
+
+      <p><label for="select">History:</label>
+        <p></p>
+      <select name="select" id="FreshHist" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+      </select></p>
+
+      <p><label for="select">Science:</label>
+        <p></p>
+      <select name="select" id="FreshSci" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+      </select></p>
+
+      <p><label for="select">Language:</label>
+        <p></p>
+      <select name="select" id="FreshLang" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+      </select></p>
+
+      <p><label for="select">Arts:</label>
+        <p></p>
+      <select name="select" id="FreshArt" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+      </select></p>
+
+      <p><label for="select">Electives:</label>
+        <p></p>
+      <select name="select" id="FreshElect" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+      </select></p>
+
+    </div>
+<div class="columns">
+      <h4>Sophomore Year</h4>
+      <p>
+        <label for="select2">English:</label>
+        <p></p>
+        <select name="select2" id="SophEng" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+      <p>
+        <label for="select2">Math:</label>
+        <p></p>
+        <select name="select2" id="SophMath" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+      <p>
+        <label for="select2">History:</label>
+        <p></p>
+        <select name="select2" id="SophHist" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+      <p>
+        <label for="select2">Science:</label>
+        <p></p>
+        <select name="select2" id="SophSci" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+
+      <p><label for="select">Language:</label>
+        <p></p>
+      <select name="select" id="SophLang" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+      </select></p>  
+
+  
+      <p>
+
+        <label for="select2">Arts:</label>
+        <p></p>
+        <select name="select2" id="SophArt" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+      <p>
+        <label for="select2">Electives:</label>
+        <p></p>
+        <select name="select2" id="SophElect" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+    </div>
+<div class="columns">
+      <h4>Junior Year</h4>
+      <p>
+        <label for="select3">English:</label>
+        <p></p>
+        <select name="select2" id="JunEng" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+      <p>
+        <label for="select3">Math:</label>
+        <p></p>
+        <select name="select2" id="JunMath" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+      <p>
+        <label for="select3">History:</label>
+        <p></p>
+        <select name="select2" id="JunHist" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+      <p>
+        <label for="select3">Science:</label>
+        <p></p>
+        <select name="select2" id="JunSci" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+
+      <p><label for="select">Language:</label>
+        <p></p>
+      <select name="select" id="JunLang" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+      </select></p>
+
+
+
+  
+      <p>
+        <label for="select3">Arts:</label>
+        <p></p>
+        <select name="select2" id="JunArt" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+      <p>
+        <label for="select3">Electives:</label>
+        <p></p>
+        <select name="select2" id="JunElect" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+        </select>
+      </p>
+    </div>
+<div class="columns">
+  <h4>Senior Year</h4>
+  <p>
+    <label for="select4">English:</label>
+    <p></p>
+    <select name="select2" id="SenEng" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+    </select>
+  </p>
+  <p>
+    <label for="select4">Math:</label>
+    <p></p>
+    <select name="select2" id="SenMath" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+    </select>
+  </p>
+  <p>
+    <label for="select4">History:</label>
+    <p></p>
+    <select name="select2" id="SenHist" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+    </select>
+  </p>
+  <p>
+    <label for="select4">Science:</label>
+    <p></p>
+    <select name="select2" id="SenSci" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+    </select>
+  </p>
+
+      <p><label for="select">Language:</label>
+        <p></p>
+      <select name="select" id="SenLang" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+      </select></p>
+
+  
+  <p>
+    <label for="select4">Arts:</label>
+    <p></p>
+    <select name="select2" id="SenArt" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+    </select>
+  </p>
+  <p>
+    <label for="select4">Electives:</label>
+    <p></p>
+    <select name="select2" id="SenElect" onchange="UpdateCredits()">
+    <option value = "0" selected>None</option>
+    <option value = "0.5">Minor</option>
+<option value = "1">2 Minors</option>
+    <option value = "1">Major</option>
+<option value = "2">2 Majors</option>
+    </select>
+  </p>
+</div>
+  </div>
+  <div class="row blockDisplay"> </div>
+<footer class="secondary_header footer">
+    <div class="copyright">2022 - Princeton Day School<strong></strong></div>
+  <div class="BottomText">Zander Silverman-Dultz</div>
+  </footer>
+</div>
+</body>
+</html>
